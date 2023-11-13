@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Module3LabD.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Image
+                x:Name="TheImage"
+                Source="badguy.svg"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
+            <Label
+                x:Name="TheText"
+                Text=""
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+            
+            
+            <HorizontalStackLayout Padding=".5" HorizontalOptions="Center">
+
+                <Button x:Name = "TBtn" Text="True" Clicked="OnClicked" ClassId="true" IsVisible="true" />
+                <Button x:Name = "FBtn" Text="False" Clicked="OnClicked" ClassId="false" IsVisible="true" />
+                
+            </HorizontalStackLayout>
+            
+            <Button x:Name = "RBtn" Text="Restart" Clicked="OnRestartClicked" ClassId="restart" IsVisible="false"/>
+
+
+
+
+<!--
+            <CollectionView>
+                <CollectionView.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Pizza</x:String>
+                    <x:String>Sushi</x:String>
+                    <x:String>Chilli</x:String>
+                </x:Array>
+                </CollectionView.ItemsSource>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <HorizontalStackLayout Padding=".5">
+                            
+                            <Label Text="{Binding .}" FontSize="24"></Label>
+                            <Button Text="True"></Button>
+                            <Button Text="False"></Button>
+                            
+                        </HorizontalStackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>  
+-->
+
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
